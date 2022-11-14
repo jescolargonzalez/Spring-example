@@ -5,16 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "usuarios")
 @ToString @EqualsAndHashCode
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter @Setter @Column(name = "id")
     private Long id;
 
