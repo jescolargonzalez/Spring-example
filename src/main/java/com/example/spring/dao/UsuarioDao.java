@@ -9,4 +9,6 @@ public interface UsuarioDao {
 
     void eliminar(Long id);
     void newUser(User user);
+
+    User obtenerUserPorCredenciales(User user);
 }
